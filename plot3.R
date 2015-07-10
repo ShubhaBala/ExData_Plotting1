@@ -1,0 +1,8 @@
+par(new=F)
+plot(data[,10], data[,"Sub_metering_1"], type="l", ylim=c(0, max(data[,"Sub_metering_1"])), ylab="Energy sub metering", xlab="")
+par(new=T)
+plot(data[,10], data[,"Sub_metering_2"], type="l", axes=F, ylab="", ylim=c(0, max(data[,"Sub_metering_1"])), col="red", xlab="")
+par(new=T)
+plot(data[,10], data[,"Sub_metering_3"], type="l", axes=F, ylab="", ylim=c(0, max(data[,"Sub_metering_1"])), col="blue", xlab="")
+leg.txt<-c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
+legend("topright", leg.txt, lty=1, col=c('black', 'red', 'blue'), cex=0.75)
